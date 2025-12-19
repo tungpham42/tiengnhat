@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap");
+
+:root {
+  --bg-color: #fafaf5; /* Cream/Rice Paper */
+  --card-bg: #ffffff;
+  --primary-color: #557c55; /* Matcha Green */
+  --primary-light: #e8f5e9;
+  --accent-color: #d4a373; /* Warm Wood */
+  --text-main: #4a4a4a;
+  --text-heading: #2c3e50;
+  --shadow-soft: 0 8px 24px rgba(85, 124, 85, 0.08);
+  --shadow-hover: 0 12px 32px rgba(85, 124, 85, 0.15);
+  --border-radius: 24px;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: "Nunito", sans-serif; /* Friendly body font */
+  color: var(--text-main);
+  background-image: radial-gradient(#e0e0e0 1px, transparent 1px);
+  background-size: 24px 24px; /* Subtle dot grid pattern like a notebook */
+}
+
+/* --- Typography --- */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Noto Serif JP", serif !important; /* Academic headings */
+  color: var(--text-heading) !important;
+}
+
+/* --- Layout Wrappers --- */
+.app-container {
+  max-width: 900px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.section-header .ant-typography-secondary {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #888;
+}
+
+/* --- Card Styling (Cozy/Friendly) --- */
+.study-card {
+  border: none !important;
+  border-radius: var(--border-radius) !important;
+  box-shadow: var(--shadow-soft) !important;
+  transition: all 0.3s ease !important;
+  background: var(--card-bg);
+  overflow: hidden;
+  height: 100%;
+}
+
+.study-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover) !important;
+}
+
+.study-card .ant-card-head {
+  border-bottom: 1px dashed #e0e0e0; /* Notebook line style */
+  font-family: "Noto Serif JP", serif;
+  font-weight: 600;
+}
+
+/* --- Category Card Specifics --- */
+.category-card {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.category-icon-wrapper {
+  background: var(--primary-light);
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  border-radius: 50%;
+  margin: 0 auto 16px;
+  color: var(--primary-color);
+  font-size: 32px;
+}
+
+/* --- Dialogue/Conversation Styling --- */
+.dialogue-bubble {
+  padding: 16px 20px;
+  border-radius: 18px;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  min-width: 200px;
+}
+
+/* Person A (Teacher/Speaker) */
+.bubble-a {
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-bottom-left-radius: 4px;
+}
+
+/* Person B (You/Learner) */
+.bubble-b {
+  background: var(--primary-light);
+  border: 1px solid transparent;
+  border-bottom-right-radius: 4px;
+}
+
+.japanese-text {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-heading);
+  margin-bottom: 4px;
+  font-family: "Noto Serif JP", serif;
+}
+
+.romaji-text {
+  font-size: 0.9rem;
+  color: #8fa3ad;
+  font-style: italic;
+  font-family: "Nunito", sans-serif;
+}
+
+.vietnamese-text {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 6px;
+  border-top: 1px dashed #ddd;
+  padding-top: 6px;
+}
+
+/* --- Buttons & Tabs --- */
+.ant-btn-primary {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 4px 10px rgba(85, 124, 85, 0.3);
+  font-weight: 600;
+}
+
+.ant-tabs-tab {
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.1rem;
+  padding: 12px 24px !important;
+}
+
+.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: var(--primary-color) !important;
+}
+
+.ant-breadcrumb a {
+  color: #888 !important;
+  transition: color 0.3s;
+}
+
+.ant-breadcrumb a:hover {
+  color: var(--primary-color) !important;
+}
