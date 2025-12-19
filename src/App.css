@@ -161,3 +161,12 @@ h5 {
 .ant-breadcrumb a:hover {
   color: var(--primary-color) !important;
 }
+
+.ant-card-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.ant-card-actions li {
+  width: fit-content !important;
+}

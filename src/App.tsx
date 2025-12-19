@@ -190,7 +190,7 @@ const HomePage = () => {
         {categories.map((catObj) => (
           <Col xs={24} sm={12} md={8} key={catObj.slug}>
             <Link to={`/danh-muc/${catObj.slug}`}>
-              <Card hoverable className="study-card category-card">
+              <Card className="study-card category-card">
                 <div className="category-icon-wrapper">
                   <ReadOutlined />
                 </div>
@@ -304,12 +304,10 @@ const CategoryPage = () => {
                 renderItem={(item: Phrase) => (
                   <List.Item>
                     <Card
-                      hoverable
                       className="study-card"
                       actions={[
                         <Button
                           type="text"
-                          block
                           icon={<SoundOutlined />}
                           loading={loadingText === item.japanese}
                           onClick={() => playAudio(item.japanese)}
