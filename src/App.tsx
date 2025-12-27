@@ -63,7 +63,9 @@ const useTTS = () => {
     try {
       setLoadingText(text);
       // Đảm bảo đường dẫn backend chính xác
-      const response = await axios.get(`/.netlify/functions/tts?text=${text}`);
+      const response = await axios.get(
+        `https://googlespeak.netlify.app/api/tts?text=${text}&lang=ja`
+      );
 
       if (response.data && response.data.audioContent) {
         const audio = new Audio(response.data.audioContent);
